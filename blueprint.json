@@ -1,0 +1,146 @@
+{
+  "appName": "CodeQuiz",
+  "language": "TypeScript with Next.js",
+  "fileStructure": {
+    "root": [
+      {
+        "name": "package.json",
+        "content": "{...dependencies and scripts...}"
+      },
+      {
+        "name": "next.config.js",
+        "content": "module.exports = {...next config...};"
+      },
+      {
+        "name": "tailwind.config.ts",
+        "content": "module.exports = {...tailwind config...};"
+      },
+      {
+        "name": "postcss.config.js",
+        "content": "module.exports = {...postcss config...};"
+      },
+      {
+        "name": "tsconfig.json",
+        "content": "{...typescript config...}"
+      },
+      {
+        "name": "src",
+        "children": [
+          {
+            "name": "app",
+            "children": [
+              {
+                "name": "layout.tsx",
+                "content": "// Root layout component"
+              },
+              {
+                "name": "page.tsx",
+                "content": "// Main page component"
+              },
+              {
+                "name": "quiz",
+                "children": [
+                   {
+                     "name": "page.tsx",
+                     "content": "//Quiz Page component"
+                   }
+                ]
+              },
+              {
+                "name": "results",
+                "children": [
+                   {
+                     "name": "page.tsx",
+                     "content": "//Results page component"
+                   }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "components",
+            "children": [
+              {
+                "name": "Question.tsx",
+                "content": "// Question component"
+              },
+              {
+                "name": "AnswerOption.tsx",
+                "content": "// Answer option component"
+              }
+            ]
+          },
+          {
+            "name": "lib",
+            "children": [
+              {
+                "name": "data.ts",
+                "content": "// Quiz question data"
+              },
+               {
+                "name": "utils.ts",
+                "content": "// Utility functions"
+              }
+            ]
+          },
+          {
+            "name": "styles",
+            "children": [
+              {
+                "name": "globals.css",
+                "content": "/* Global styles */"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": ".env.local",
+        "content": "// Environment variables"
+      }
+    ]
+  },
+  "mvpIdea": "A simple quiz website where users can answer coding-related questions and receive a score upon completion.",
+  "libraries": [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "ShadCN/ui",
+    "Zod (for form validation)",
+    "zustand (for state management)"
+  ],
+  "projectPlan": [
+    {
+      "phase": "Phase 1: Setup and Basic Quiz Structure",
+      "tasks": [
+        "Set up Next.js project with Tailwind CSS and ShadCN/ui.",
+        "Create the basic UI structure: header, question area, answer options, submit button.",
+        "Implement basic state management for tracking current question and score.",
+        "Load quiz questions from a static data file (data.ts).",
+        "Implement very basic styling to make the quiz presentable."
+      ]
+    },
+    {
+      "phase": "Phase 2: Core Quiz Functionality and Scoring",
+      "tasks": [
+        "Implement question navigation (next/previous buttons).",
+        "Implement answer selection and scoring logic.",
+        "Add form validation using Zod to ensure users select an answer before submitting.",
+        "Display feedback to the user after each answer (correct/incorrect).",
+        "Improve styling with Tailwind CSS for a better user experience."
+      ]
+    },
+    {
+      "phase": "Phase 3: Results Page and User Experience Enhancements",
+      "tasks": [
+        "Create a results page to display the user's final score and a summary of correct/incorrect answers.",
+        "Implement a timer for the quiz.",
+        "Add a 'reset quiz' button to start a new quiz.",
+        "Further refine the UI with more advanced Tailwind CSS styling and ShadCN/ui components.",
+        "Implement responsive design for different screen sizes."
+      ]
+    }
+  ],
+  "stackReasoning": "Next.js provides server-side rendering and routing, React provides the component-based architecture, Tailwind CSS allows for rapid UI development with utility classes, ShadCN/ui provides pre-built accessible components, Zod ensures form validation, and Zustand provides a simple way to manage state.",
+  "entryPoint": "src/app/page.tsx"
+}
